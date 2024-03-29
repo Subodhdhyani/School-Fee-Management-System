@@ -1,66 +1,113 @@
-<p align="center"><a href="#"><img src="{{ url('logo/logo-color.png')}}" width="400" alt="Application Logo"></a></p>
+# School Fee Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Tags
 
-## About Laravel
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/subodhdhyani/School-Fee-Management-System/blob/master/LICENSE)
+[![Laravel](https://img.shields.io/badge/Laravel-v11.0.0-red.svg)](https://laravel.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-v8.0-blue.svg)](https://www.mysql.com/)
+[![Razorpay](https://img.shields.io/badge/Razorpay-v2.9.0-green.svg)](https://razorpay.com/)
+[![HTML](https://img.shields.io/badge/HTML-5-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-v5.2.3-purple.svg)](https://getbootstrap.com/)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Ethereal Echoes School Fees Portal
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Ethereal Echoes School Fees Portal is a comprehensive fee management system designed for educational institutions. It allows students to conveniently make fee payments via a payment gateway (Razorpay) and download fee receipts. Additionally, administrators can log in to the portal and manage refunds and fees.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+- **Student Fee Payment**: Students can make fee payments securely through an integrated payment gateway (Razorpay).
+- **Fee Receipt Download**: Students can download fee receipts instantly after successful payment.
+- **Admin Panel**: Administrators can log in and efficiently manage refunds and fees.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Technologies Used
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Laravel**: PHP framework for building the application.
+- **Razorpay API**: Payment gateway integration for handling fee transactions.
+- **MySQL**: Database management system for storing application data.
+- **Bootstrap**: Frontend framework for building responsive and mobile-first web pages.
+- **Blade Templating Engine**: Laravel's powerful templating engine for building UI components.
 
-## Laravel Sponsors
+## Requirements
+- PHP v>=8.0 => wamp
+- Laravel v11
+- Composer
+- MySQL v>=8.0
+- Razorpay Account
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+## Installation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. **Clone the repository:**
+    ```sh
+    https://github.com/Subodhdhyani/School-Fee-Management-System.git
+    ```
 
-## Contributing
+2. **Install Composer dependencies:**
+    ```sh
+    composer install
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Copy `.env.example` to `.env` and update the environment variables:**
+    ```sh
+    cp .env.example .env
+    ```
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **Generate application key:**
+    ```sh
+    php artisan key:generate
+    ```
 
-## Security Vulnerabilities
+5. **Update `.env` with your database and Razorpay API keys.**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Run database migrations:**
+    ```sh
+    php artisan migrate
+    ```
+
+7. **Run Seeder for admin credentials set:**
+    ```sh
+    php artisan db:seed
+    ```
+
+8. **Serve the application:**
+    ```sh
+    php artisan serve
+    ```
+
+9. **Access the application in your browser at [http://localhost:8000](http://localhost:8000).**
+10. **Login into the admin dashboard in your browser at [http://localhost:8000/admin/login](http://localhost:8000/admin/login).**
+
+
+## Changes in Project:
+- Set the Razorpay key inside `.env`. RAZORPAY_KEY_ID=... and RAZORPAY_KEY_SECRET=........
+- Create Database(mysql) and named it `schoolfeesportal`.
+
+## Credentials for admin login:
+- Email : admin@ethereal.edu.in
+- Password : admin@12345
+
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Contributors
+- [Subodh Dhyani](https://github.com/subodhdhyani)
+
+## Disclaimer
+The project school name used in this repository are purely hypothetical and do not represent real entities. These names are chosen solely for demonstration and project purposes. Any resemblance to actual schools or organizations, is purely coincidental. Similarly, any logos or trademarks used are for illustrative purposes only and do not imply endorsement or affiliation with any real entities.As of the repository publication date, "Ethereal Echoes School" is not found online. 
+
+
+## Snapshot
+- [Image 1](https://github.com/Subodhdhyani/School-Fee-Management-System/assets/84286795/8d54924e-c216-4453-8fba-4a60aae11295)
+- [Image 2](https://github.com/Subodhdhyani/School-Fee-Management-System/assets/84286795/20a7e0c5-004a-44d1-b1e1-bc6689a4855d)
+- [Image 3](https://github.com/Subodhdhyani/School-Fee-Management-System/assets/84286795/d684ad82-61b7-425a-be2a-1d15e37f7e40)
+- [Image 4](https://github.com/Subodhdhyani/School-Fee-Management-System/assets/84286795/6f141110-79f8-4891-9e69-fbfff40e8eff)
+- [Image 5](https://github.com/Subodhdhyani/School-Fee-Management-System/assets/84286795/411e4934-abcb-4a98-b561-83d6709de1dd)
+- [Image 6](https://github.com/Subodhdhyani/School-Fee-Management-System/assets/84286795/386cc337-3f4f-4640-8b21-48e3b474686d)
+- [Image 7](https://github.com/Subodhdhyani/School-Fee-Management-System/assets/84286795/2ffddbc1-6add-408f-9676-dbf005f567f3)
+- [Image 8](https://github.com/Subodhdhyani/School-Fee-Management-System/assets/84286795/720ff4ee-cc08-4b63-a0fd-afceca7146a9)
+
+
+
